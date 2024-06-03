@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .main {
+            max-width: 1200px;
+            margin: 100px auto 2rem auto; /* Adjusted to provide space for fixed navbar */
+            padding: 1rem;
+            background-color: #fff;
+
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 2rem);
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1; /* Ensure 1:1 aspect ratio */
+            object-fit: cover;
+        }
+        .product-item h3 {
+            margin: 0.5rem 0;
+        }
+        .product-item p {
+            color: #555;
+        }
+        .product-item .price {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0.5rem 0;
+        }
+        .product-item button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .product-item button:hover {
+            background-color: #218838;
+        }
+
+        .main h1 {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <h1>Welcome to Our Webshop</h1>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="webshop/ketko.jpg" alt="Product 1">
+                <h3>Levente két köve</h3>
+                <p>Erősen ajánlott nagy gondolatok megszüléséhez</p>
+                <div class="price">2.000 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/hoodiesdown.jpg" alt="Product 2">
+                <h3>Hoodies down pulover</h3>
+                <p>Hogy ne a szekta hoodiet kelljen ledobni</p>
+                <div class="price">12.000 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/apron.PNG" alt="Product 3">
+                <h3>Daddy kötény</h3>
+                <p>Mert a mi daddynk a legjobb</p>
+                <div class="price">7.600 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/halasi.jpg" alt="Product 1">
+                <h3>Halasi bányász csákány</h3>
+                <p>Jó auditokra, energia italokra és gyémántokra</p>
+                <div class="price">6.900 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/wifebeater.png" alt="Product 2">
+                <h3>Filmesek trikó</h3> 
+                <p>Ha nincs miben verned az asszonyt</p>
+                <div class="price">4.444 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/tefal.png" alt="Product 3">
+                <h3>Tefal fasszal</h3>
+                <p>Ha nem csak vacoraznal</p>
+                <div class="price">16.000 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/calendar.png" alt="Product 3">
+                <h3>Naptár Levente anyjával</h3>
+                <p>Ha pontos lennél, és kanos</p>
+                <div class="price">9.999 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/smutbook.png" alt="Product 3">
+                <h3>Nyomtatott SMUT könyv</h3>
+                <p>A híres író, Dank tollából, dedikálva</p>
+                <div class="price">5.990 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="webshop/cockroach.jpg" alt="Product 3">
+                <h3>LIMITALT Eredeti Nepszinhaz csotány</h3>
+                <p>Utolsó példányok, mielőtt a Tűzoltóban is végleg kiírtják őket</p>
+                <div class="price">3.000 HUF</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

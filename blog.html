@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs & Smuts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        main {
+            padding: 20px 10%;
+        }
+        .blog-title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .blog-description {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .blog-sections {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .section {
+            width: 48%;
+        }
+        .blog-item {
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .blog-item:hover {
+            transform: scale(1.05);
+        }
+        .blog-item img {
+            width: 100%;
+            height: auto;
+        }
+        .blog-item-content {
+            padding: 15px;
+        }
+        .blog-item-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .blog-item-summary {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="blog-title">Welcome to Our Blog</div>
+        <div class="blog-description">Stay updated with our latest news, articles, and stories.</div>
+        <div class="blog-sections">
+            <div class="section">
+                <div class="blog-item">
+                    <img src="img/group-2.png" alt="Blog 1">
+                    <div class="blog-item-content">
+                        <div class="blog-item-title">What happened on the Balaton before?</div>
+                        <div class="blog-item-summary">Story of how Zotyóvég always went more to the South than he was supposed to</div>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img src="img/group-1.jpg" alt="Blog 2">
+                    <div class="blog-item-content">
+                        <div class="blog-item-title">First fancy pic</div>
+                        <div class="blog-item-summary">It was a much more manageable number of people</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="blog-item" onclick="location.href='blog-1.html';" style="cursor: pointer;">
+                    <img src="gallery/pic12.jpg" alt="Blog 3">
+                    <div class="blog-item-content">
+                        <div class="blog-item-title">Local Man impregnates everyone's mother</div>
+                        <div class="blog-item-summary">No summary needed, you had to be there</div>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img src="gallery/pic9.png" alt="Blog 4">
+                    <div class="blog-item-content">
+                        <div class="blog-item-title">Dinom-Danom</div>
+                        <div class="blog-item-summary">More village in these two men than tefal in Fruzsina</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

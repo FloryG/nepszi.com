@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu with Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 140px;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-picture {
+            width: 50%;
+            height: auto;            ;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+        }
+        .post-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .post-date {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .post-content {
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <img src="gallery/pic12.jpg" alt="Main Picture" class="main-picture">
+            <div class="content">
+                <h2 class="post-title">Local man impregnates everyone's mother</h2>
+                <p class="post-date">Published on June 2, 2024</p>
+                <div class="post-content">
+                    <p>Ez nem egy szokványos nap volt a kisvárosunkban. Levente, a helyi logisztikus, valahogy képes volt elérni, hogy mindenki anyját teherbe ejtse. Igen, jól olvastad. Mindenkiét. Az egész városban.                    </p>
+                    <p>Az egész történet akkor kezdődött, amikor Levente egy átlagos csütörtök délutánon nekivágott a szokásos útvonalának a virágos Nissanjával. Kicsit még mindig furcsa, hogy bár nem volt pizzafutár, az emberek mégis így hívták néha, mivel mindig ő volt az, aki mindent kézbesített. Azon a napon azonban más volt a célja. Mivel mindenki az ő anyját akarta teherbe ejteni, Levente úgy döntött, hogy egy Uno reverse kártyát húz.                    </p>
+                    <p>A nők sorra számoltak be arról, hogy miután Levente elment, hamarosan furcsa érzésük támadt. Mindenki a helyi patikába rohant, és a tesztek eredménye... nos, egyöntetű volt. Az egész nap folyamán a két kő a fejében nem ütközött össze, így nem eszmélt rá elég hamar, hogy mit tett.                    </p>
+                    <p>Természetesen azonnal megkerestük Leventét, aki éppen a virágos Nissanját próbálta rendbe tenni a botrány közepette. "Én csak vissza akartam adni, amit kaptam!" - mondta Levente. "Egész életemben arra vágytam, hogy igazságot tegyek, nem pedig arra, hogy városunk újabb baba-bummot hozzak létre!"</p>
+                    <p>A város vezetősége természetesen zavarban van. "Egyikünk sem látta ezt előre" - mondta Karigeri. "Úgy tűnik, Levente tényleg túlteljesített a kiszállításban." Most a város azon töpreng, hogy hogyan kezelje az újonnan érkező csecsemőáradatot, és hogy ki fogja nevelni ezt a sok új kis csodát.</p>
+                    <p>Levente pedig? Nos, most már nem csak a legigazságosabb logisztikus, hanem a legtermékenyebb is. "Ezért nem voltam soha a nagycsaládos kedvezmények híve" - sóhajtott fel. Az anyukák pedig? Nos, ők csak mosolyognak és Leventéhez fordulnak minden kérdéssel. Ez most tényleg egy igazán vicces történet, amit az unokáinknak is el fogunk mesélni. Mert biztos lehetsz benne, hogy lesz kinek mesélni.                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+    <main class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="gallery/pic1.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic2.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic3.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic4.jpg" alt="Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic5.jpg" alt="Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic6.jpg" alt="Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic7.jpg" alt="Image 7">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic8.jpg" alt="Image 8">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic10.jpg" alt="Image 9">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic9.png" alt="Image 10">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic11.jpg" alt="Image 11">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery/pic12.jpg" alt="Image 12">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

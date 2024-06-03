@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { line-height:115%; font-family:Arial; font-size:11pt }
+		.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        h1, h2, h3, h4, h5, h6, p { margin:0pt }
+        li, table { margin-top:0pt; margin-bottom:0pt }
+        h1 { margin-top:20pt; margin-bottom:6pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:20pt; font-weight:normal; color:#000000 }
+        h2 { margin-top:18pt; margin-bottom:6pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:16pt; font-weight:normal; color:#000000 }
+        h3 { margin-top:16pt; margin-bottom:4pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:14pt; font-weight:normal; color:#434343 }
+        h4 { margin-top:14pt; margin-bottom:4pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:12pt; font-weight:normal; font-style:normal; color:#666666 }
+        h5 { margin-top:12pt; margin-bottom:4pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:11pt; font-weight:normal; color:#666666 }
+        h6 { margin-top:12pt; margin-bottom:4pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:11pt; font-weight:normal; font-style:italic; color:#666666 }
+        .Subtitle { margin-top:0pt; margin-bottom:16pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Arial; font-size:15pt; font-style:normal; color:#666666 }
+        .Title { margin-top:0pt; margin-bottom:3pt; page-break-before:auto; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-size:26pt }
+        .normal0 { line-height:115%; font-size:11pt }
+        .center {
+            margin: auto;
+            width: 55%;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+    <main>
+		<div class="center">
+			<div style="clear:both">
+			</div>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">LC Népszínház Szervezeti és Működési Szabályzat</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0 center" style="text-align:center; line-height:115%; font-size:25pt">
+				<span style="height:0pt; text-align:left; display:block; position:absolute; z-index:0"><img src="img/vision.png" width="auto" height="366" alt="" style="margin-top:39.75pt; margin-left:130.88pt; position:absolute" /></span><strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="line-height:115%; font-size:18pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="line-height:115%; font-size:18pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="line-height:115%; font-size:18pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p  class="normal0 center"  style="line-height:115%; font-size:18pt">
+				<strong><span  text-align="center" style="font-family:Lato; ">Hatályba lépett: 01/05/2023</span></strong><br /><strong><span text-align="center" style="font-family:Lato; ">Utols módosítás: 03/02/2024</span></strong>
+			</p>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<ol style="margin:0pt; padding-left:0pt">
+				<li class="normal0" style="margin-left:36pt; text-indent:-18pt; text-align:center; line-height:115%; font-family:Lato; font-size:25pt; font-weight:bold; list-style-position:inside">
+					<span style="width:28.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>General thingies
+				</li>
+			</ol>
+			<p class="normal0" style="text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">1.1. The following organizational regulations, herein (lol, here, hehe XD) after referred to as "</span><em><span style="font-family:Lato; ">Írott Szar</span></em><span style="font-family:Lato">". </span>
+			</p>
+			<p class="normal0">
+				<span style="width:36pt; font-family:Lato; display:inline-block">&#xa0;</span><span style="font-family:Lato">1.1.1.</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">Updating </span><strong><span style="font-family:Lato; ">Írott Szar </span></strong>is always the responsibility of those two drunk people, akiket be lehetett erre palizni. Noob-ok.
+			</p>
+			<p class="normal0">
+				&#xa0;
+			</p>
+			<p class="normal0">
+				1.2. <span style="font-family:Lato">The purpose of this organization is to come together as a group of interest and elevate each other's mood while performing self-intoxicating activities in a racist, sexist, and generally hateful manner, especially towards nőnemű szőke cibbonyok.</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">1.3. Our vision is that: </span><u><span style="font-family:Lato; ">We strive to achieve the deepest level of drunkness and the dirtiest trashness of humankind's potential.</span></u>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">1.4. Our operational activities (herein after referred as Tájm ) include:</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Thematic drinking</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Non-thematic drinking</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Just simply drinking</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Accidental drinking</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">*insert another faszságg here*</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Insulting bEach other</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Random tríp aka bécsi népszi</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">1.4.1 But must always include that we are szopkodni </span><strong><span style="font-family:Lato; ">Márki’s Big Black Vízipipa.</span></strong>
+			</p>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">1.4.1.1 In case of random tríp </span><strong><span style="font-family:Lato; ">Márki’s Big Black Vízipipa</span></strong><span style="font-family:Lato"> can be subtituted by </span><strong><span style="font-family:Lato; color:#ffffff; background-color:#000000">Soma’s Small White Manórúd</span></strong>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">1.5 The organization was founded 24262 months lyézus utan by négy individuals who identified as filmesek, and one of these great individuals wanted to share a meme among friends.</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">The founding members ( hereinafter referred to as Őshonos ciintányérok)</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">are:</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">-</span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Kovi Flórián Producer Úr</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">-</span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Operatőr Máté</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">-</span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Hangmérnök Gábor</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">-</span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Néger Pornósztár</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">These four dicks are kibaszottul maguknak valók, szóval se ki se be</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<ol start="2" style="margin:0pt; padding-left:0pt">
+				<li class="normal0" style="margin-left:36pt; text-indent:-18pt; text-align:center; line-height:115%; font-family:Lato; font-size:25pt; font-weight:bold; list-style-position:inside">
+					<span style="width:28.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>Membership
+				</li>
+			</ol>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.1. The organization membership roles</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">include</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<strong><span style="font-family:Lato; "><span style="font-weight:normal">-</span></strong></span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:Lato; ">Őshonos ciintányérok</span></strong>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<strong><span style="font-family:Lato; "><span style="font-weight:normal">-</span></strong></span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:Lato; ">Bevándorló kurvák </span></strong>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<strong><span style="font-family:Lato; "><span style="font-weight:normal">-</span></strong></span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:Lato; ">Casual Brácsák</span></strong>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<strong><span style="font-family:Lato; "><span style="font-weight:normal">-</span></strong></span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:Lato; ">Szőröstalpú románok</span></strong>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<strong><span style="font-family:Lato; "><span style="font-weight:normal">-</span></strong></span><span style="width:14.18pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><strong><span style="font-family:Lato; ">Korlátolt Káré</span></strong>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.2 Bevandorlo kurvák are those newcomer people who:</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Someone wanted to</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Someone wants to</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Someone will want to</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">fuck on the kitchen table.</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.3 Casual Brácsáknak azokat a személyeket nevezzük azokat a (jobb esetben férfi) személyeket, akiket bár megdugni senki nem akart, többségi szavazás alapján, teljes taggá avanzsáltunk.</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.4. Szőrőstalpú románok (egyszeri vendégek)</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">We identify people as román in the initial phase of LC Népszinhaz (except when the previous point is true )</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">when someone was invited but:</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Was a fucking bore</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Was too big of a pussy to drink</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Fucks your ex-fiancé *wink wink Márki (and Bálint)*</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Overly pc dermokrata faszok, aki szerint a nőknek van joga a szendvicskészitésen és a mosogatáson kivűl (a KoNyHáBAn!!!4!4!4!4!!)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Azok a nyomorek közgázosok akik ahogy házhoz érnek telefont töltenek </span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Azok akik nem hallgatnak központi hatalmat. Szégyen és gyalázat, még Orbán szerint is </span><span style="font-family:'Segoe UI Emoji'">😢</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.5. KK</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">2.6. Tájmba való meghivás menete: </span>
+			</p>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">2.5.1 Csak őshonos cintányérok legalább 50%-a hívhat meg valakit saját akaratából vagy pedig egy büdös kurva</span><span style="font-family:Lato">&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">ajánlására</span>
+			</p>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">2.5.2 Be kell hívni naptár eseményre, és csak az elfogadás után hivatalos a a meghívás</span>
+			</p>
+			<p class="normal0" style="margin-left:72pt">
+				<strong><span style="font-family:Lato; ">2.5.2.1 Albert kiegészítés:</span></strong><span style="font-family:Lato"> amennyiben részegen haza cibalsz valakit a Tájmra, ez</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">esetben a naptár esemény elengedhető, de a cintányér bele egyezés nem </span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<br style="page-break-before:always; clear:both" />
+			</p>
+			<ol start="3" style="margin:0pt; padding-left:0pt">
+				<li class="normal0" style="margin-left:36pt; text-indent:-18pt; text-align:center; line-height:115%; font-family:Lato; font-size:25pt; font-weight:bold; list-style-position:inside">
+					<span style="width:28.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>Voting and Rights
+				</li>
+			</ol>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">3.1. Fixed Voting rights:</span>
+			</p>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">3.1.1 Őshonos cintányérs posess the infinity stone of voting rights (mert mivel felsőbbrendű valamik, van joguk, köztük a birtoklás)</span>
+			</p>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">3.1.2 Szőrostalpú románok can never have a vote because Románia is just a legend and akinek szőrős a talpa, az borotvalja már le geci!!!</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">3.2. Telhes taggá valas feltetelei: (min</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Legalabb 3 Tájmon reszt vett es megtűrték, illetve *insert kizáró okok*</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Tagja a messenger csoportnak</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Valaki (kettő bevándorló migráns vagy egy cintányér) nominálja</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Egy olyan kvaliti télleg vicces </span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">nemsomavicces meme készitese es csoportba küldése</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">3.3. Telhes taggá válás menete, aka túl komplikált ivós NatCo:</span>
+			</p>
+			<ol style="margin:0pt; padding-left:0pt">
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Ajánlas kérese es megszerzése
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Meme beküldése
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Az indulas fizikai jelzése: kötelessége egy, a társaság számára imponáló dalt elindítania a szeánsz ideje alatt általa valasztott időpontban, a kiválasztott zene alatt egy üveg kellemesen nemtudomilyen tömenyet prezentálnia illetve az üveg prezentálása közben segget felemelni üloalkalmatosságarol es elkiáltania HOGY “tag akarok lenni” 
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Fél liter hosszú, szavazotagok altal kevert ital elfogyasztása (Roussian roulette)
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Motivacios beszed eloadasa, melynek tartalmaznia kell: a társasághoz való csatlakozas fele érzett belső mély es komoly motivációt, beszéd közben vagy után a szándék bizonyitása KREATIV nagyon kreativ módon
+					<ol style="margin-right:0pt; margin-left:0pt; padding-left:0pt; list-style-type:lower-latin">
+						<li class="normal0" style="margin-left:30.91pt; padding-left:5.09pt">
+							<strong>Cintányér és kurvák zárdék: </strong>Nőnemu egyedek eseteben a jelentős vetkőzes elfogadott
+							<ol style="margin-right:0pt; margin-left:0pt; padding-left:0pt; list-style-type:lower-roman">
+								<li class="normal0" style="margin-left:23pt; padding-left:13pt">
+									Fruzsinara nem vonatkozik, mert ő egy ribanc aki nem vetkőzik
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Shot lehuzasa (amit hozott)
+				</li>
+				<li class="normal0" style="margin-left:67.71pt; padding-left:4.29pt; font-family:Lato">
+					Szavazas elinditasakor az induló sisa füstot lélegez be, amelynek célja a szavazás végéig való benntartás, amennyiben ez nem sikerül,&#xa0; minden kilégzésnel shotot köteles fogyasztani mely alatt a szavazás szünetel
+				</li>
+			</ol>
+			<p class="normal0" style="text-indent:36pt">
+				<span style="font-family:Lato">3.3.1 A szavazas eredménye után győzelmi vagy vereségi shot mindenkinek!!</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<br /><br /><br /><br /><br /><span style="font-family:Lato">3.4. Attendance es szavazati jog elvesztese</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Megszünhet: kizáraásal, a hal megevésével, lemondással (de az buzis)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Automatikusan megszűnik HA: 3 alkalmat kihagy (kettő lehet véletlen három gáz), kétszer egymas után nem hoz piát</span><span style="font-family:Lato">&#xa0; </span><span style="font-family:Lato">(</span><strong><span style="font-family:Lato; ">Levente záradék</span></strong><span style="font-family:Lato">: hónap végén nem számit - hónap vege tárgyhó 25-től)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Amennyiben megbaszod valaki exét (ejnye amugy geci Bálint ez kurva gáz)</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<ol start="4" style="margin:0pt; padding-left:0pt">
+				<li class="normal0" style="margin-left:36pt; text-indent:-18pt; text-align:center; line-height:115%; font-family:Lato; font-size:25pt; font-weight:bold; list-style-position:inside">
+					<span style="width:28.88pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>General Rules
+				</li>
+			</ol>
+			<p class="normal0" style="margin-left:36pt; text-align:center; line-height:115%; font-size:25pt">
+				<strong><span style="font-family:Lato; ">&#xa0;</span></strong>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Minden alkalomra alkohol (értéke és eloszthatósága nagyobbegyenlő egy irsai oliver)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Késni szabad, de nem Anett a pédda</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Tematikus este esetében a témára honestly es beleadóan kell készülni (aka vegyél fel jelmezt csicska)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Bebaszni nem kötelező, de józanul maradni lehet a speciális esetben, melyről akkori közösség don't osztraikosszal (11.utan either way gáz)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">lC Nepszinhaz LCVM Tartasa havi negyszer javasolt, de ketszer kotelezo (vagy jön a cc, és Jani bezár minket a gecibe) </span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Enyelgés visszafogandó</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Halasi Máté (herinafter referred as local sugardaddy - LCSD) cannot be lehúzva of his already low bigfour salary with more than 10% of his monthly received amount (mivel tudjuk hogy 6 MC tag legalább annyit keres mint ő)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">Szurmay Dominik (aka tapasztalt kopasz languszta) meghívása tilos és szAnKCIoKkAL JáR!!! (Dont do it, de tényleg plsa dont inkább felveszem a Halasi cicanadrágját)</span>
+			</p>
+			<p class="normal0" style="margin-left:36pt; text-indent:-18pt">
+				<span style="font-family:Lato">●</span><span style="width:12.15pt; font:7pt 'Times New Roman'; display:inline-block">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:Lato">EB/MC/ECB/CC Pulcsi kint marad (ha fázol, felveheted, de nem buziskodunk,egymás felmelegitése preferred)</span>
+			</p>
+			<p class="normal0">
+				<br style="page-break-before:always; clear:both" />
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+				</tr>
+			</table>
+			<p class="normal0" style="text-align:center">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+			<p class="normal0">
+				<span style="font-family:Lato">&#xa0;</span>
+			</p>
+		</div>
+</main>
+    <script src="scripts.js"></script>
+</body>
+</html>

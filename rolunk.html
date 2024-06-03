@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rólunk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .content {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            margin-top: 115px; /* Adjust based on navbar height */
+        }
+        .left, .right {
+            width: 50vw;
+            height: 100vh;
+        }
+        .left {
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .left::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+        .right {
+            position: fixed;
+            right: 0;
+            top: 115px; /* Adjust based on navbar height */
+            width: 50vw;
+            height: calc(100vh - 115px); /* Adjust based on navbar height */
+            overflow: hidden;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .section h1 {
+            margin: 0;
+            font-size: 3em;
+            text-align: center;
+            margin-top: 100px;
+        }  
+
+        .section h2 {
+            font-size: 1.5em;
+            font-style: italic;
+            font-weight: 100;
+            margin-bottom: 40px;
+        }
+        .section p {
+            margin: 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .right img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: inset(0 0 0 0);
+            transition: clip-path 0.3s, opacity 0.3s;
+        }
+        .right img.hidden {
+            clip-path: inset(100% 0 0 0);
+        }
+
+        .firstpic {
+            z-index: 100;
+            display: block;
+        }
+
+        .secondpic {
+            display:block;
+            z-index: 99;
+        }
+
+        img {
+            display: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="left">
+            <div class="section" id="first-section">
+                <h1>Hala</h1>
+                <h2>Ki a faszom az a Máté?</h2>
+                <p>Halasi Máté a szíve, lelke, mája és bankkártyája a csapatnak. Drága kis csapatunk első tagja, aki pillanatok
+                    alatt képes a teljes csapatot összehívni egy messenger üzenettel. Legendák tartják, hogy alkoholizmusa
+                    felett maximális kontrollja van, amit fogadásban bizonyított is. A történet szerint olyan hatalmas vereséget
+                    szenvedtek kihívói, azóta is tartoznak neki egy üveg Ginnel. A teste sejtjei felett hatalma van, amikor snüsszt
+                    helyez a testében, a párnácskák kapnak nikotin függőséget és Taktikai hányás koronáztlan királya. Már akkor is bányászott mielőtt ez divat lett volna Kínában, és munka óra száma magasabb
+                    mint az ikertornyok azok fénykorában. 
+                </p>
+            </div>
+            <div class="section">
+                <h1>Flory</h1>
+                <h2>Koszos Csibe 🐣</h2>
+                <p>Flórián, csapatunk második fő alapítótagja, akit jellegzetes szőrzetéről lehet legkönnyebben felismerni,
+                    vagy tökéletes magyar apu testéről. Legendák úgy tartják, hogy hogy fürdés után kénytelen megrázni magát 
+                    különben a bundája sosem fog megszáradni. Multitasking tökéletes példánya, állítólag egyszerre foglalkozott 8 dologgal
+                    miközben kihordott két agyvérzést, meg egy ikerpárt miközben kedvesének állt papucsnak. Pénisszel nem rendelkezik,
+                    de ezt azzal szoka magyarázni, hogy a Zalai felvággotnak adományozott belőle, amivel sikeresen kirántotta őket a csődből,
+                    és azóta virágzik a vállalat.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Somci</h1>
+                <h2>ChillyCheese 🧀</h2>
+                <p>Gábor, csapatunk harmadik fő alapítótagja, akit két féleképpen lehet felismerni. Ha távol van, akkor egetrengető 
+                    hangja rettegést okoz minden élőlénynek aki azt hallja, legyen az halandó vagy isten. Közelebbről tökéletes 130 literes
+                    kukászsák teste és haja kitűnik bármilyen tömbegből, ahol az emberek max 165 cm magasak. Soma az előző két kollégával
+                    alkotta meg az első csoportot messengeren, ahol a kezdeti Népszi közéletét tárgyalták, ítélték. Professzionális sün
+                    kereső, vagy ahogy Ő hívja őket Sütnik. Éjszakai életmódot élő rágcsáló, aki alkohol fejében még több alkoholt ránt ki a 
+                    zsebéből, amivel őszintére issza magát.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Márki</h1>
+                <h2>Daddy Cool</h2>
+                <p>Az utolsó alapítótagja a eredeti négyesnek. Budget Daddyként vagy Törp-apaként működik, nem pénzügyileg hanem érzelmileg. Jellegzetes járásából 
+                    egyértelműen felismerhető, ha a mosdót vette célul átfestés indítékából. Közepesen összeszedett, lelke kockahasú, közepesen jól kinéző egyéniség. 
+                    Introvertáltak tökéletes példánya, ha többször ki kell mozdulni a lakásból, akkor heves fájdalmak közepette fekszik vissza az ágyba és nem mozdul ki semerre.
+                    Azt hiszi, hogy mindig igaza van, viszont előfordul vele is, hogy téved. Szerencsére ez csak az esetek pár százalékában jelentős. 
+                    Bölcsessége határtalan viszont tengerek keretezik azt be. Hajója van amivel ezt behajózza, sajnos az papírból van ezért mindig újat kell neki hajtogatni,
+                    amit mivel ilyen öreg már elfelejtett, hogyan kell. Cserébe van internete van amivel, ki tudja keresni, viszont nincs neki mobil nete... hol is tartottam?
+                    Ja szerintem egy paraszt amúgy akire mindenki azt hiszi hogy poénkodik pedig közben komolyan gondolja.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Fruszi</h1>
+                <h2>Tefal Kapitány</h2>
+                <p>Fruzsina, aki első látásra nőként jelenik meg, viszont ne ítéljünk a borító alapján, ugyanis Ő becses neve a csoportban 
+                    Béla. Ezt a név eredete különös balladai homály fedi, elképzelhető, hogy valami kettős egyénisége van. A hangok a fejében
+                    többször okoznak neki felfordulást az életében, de az sem segít enyhe alkoholizmusa kényszeríti a gondolkodásra. Ellenben 
+                    irigylésre méltó mennyi alkoholt képes törékeny testébe beletuszkolni. Crusholja önmagát ami teljesen jogos,
+                    hiszen pozitív visszacsatolásként a dániai vendégmunkások szemei keresztűzében létezett. Általános hívó szavai a következők: Béla, Deszka, 
+                    Tefal Kapitány, Serpenyő-szexuális (Panszexuális), A Buzi Nő, Tajgetosz Pozitív, Evolúciós zsákutca, Fogyatékos.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Netti</h1>
+                <h2>HP Chapter 6</h2>
+                <p>Aki nem olvasta volna a Harry Pottert, az bizony nem maradt le semmiről, nézzen inkább Star Wars-ot. De vissza Nettire
+                    Azt mondták nekünk, hogy borzalmasan rasszisták és szexisták vagyunk, ezért tűnt Netti felvenni a csoportba, hiszen ezzel
+                    kimaxoltuk a diverzitást nemi és rassz szempontból is. Jelenleg legkevesebbet jelenlevő tagunk, reméljük gyakrabban látjuk őt a jövőben.
+                    Kedvenc Lábbelije Flórián, itala a Gin-Tonic. Általános tulajdonsága, hogy FemiNáci, aki a nőket mindenki felé szeretné emelni,
+                    még akkoris ha azt mondja hogy csak egyenlőséget akar. Ez egy több lépcsős kisebbségi komplexus, de mi így szeretjük őt.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Csengu</h1>
+                <h2>Petra anya</h2>
+                <p>Csengu, ahogy azt a középkorban illik beházasodott a csoportba, ezáltal a Daddy szerepkör mellé egy Mommy is dukált. 
+                    Legjobb tulajdonsága, hogy sütivel látja el a Népszínház tagokat a Tájm idejére, és törődő természetével csábítja el a szíveket.
+                    Legrosszabb tulajdonsága, hogy ha számolni kell segítségére ne számítsunk. A rükverc és a kuplungulás nemezise, mind emlékszünk az
+                    Aldis parkolós esetre. Hasonló képpen Somához hangja rettentést jelenti az ott lakókban viszont ezek sokkal speciálisabb
+                    úgymond "szexuálisabb" hangok amik különbőző gyermeknemzési praktikákból következik.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Levi</h1>
+                <h2>A pedofil wishes Szentesi</h2>
+                <p>Levente, akit előbb mindenki ismerte, többszir is járt már eseményeken vendégként, viszont valahogy sose csatlakozott még a csapathoz,
+                    viszont ez csak idő kérdése volt idáig. Amit róla kell tudni, hogy Ő hatalmas, de tényleg, kibaszott nagy. Mármint értitek. Magas meg széles is.
+                    Az eszét legjobban úgy tudtuk meghatározni, mint két követ, ami akkor szül értelmes gondolatot amikor a fejben egymásnak csapódnak így szikrázva.
+                    Rá is igaz a kedves óriás kifejezés, mármint az óriás, de amúgy a kedves is. Képzelete nem ismer határt ezáltal a faszsága sem.
+                    Hobbija, hogy SMOT-kat ír, WARHAMMER figurákat épít, Playstatiönön játszik, édesanyját árulja, apja börtönben, bárhol hajtogatsz rajta tudod mit... női nemiszervet.
+                </p>
+            </div>
+            <div class="section">
+                <h1>Hanni</h1>
+                <h2>Csári Kannuli 🐽</h2>
+                <p>Hanna a csoport gyereke, örök fiatal, pedig majdnem a legöregebb. Teljesen átlagos testmagasságú, van vagy 195 cm magas.
+                    Ezen a tulajdonságán nem segít, hogy előszeretettel ugra-bugrál mint Tigris a Micimackóból. Kezdő bányászó még Ő, 
+                    reméljük, hogy jobban kezeli ezt a részét az életének, mint egy bizonyos halacska, ellenben eddig erre jó példát keveset láttunk eddig.
+                    Tonhalas tortillát szokott enni, most ezt döntsd el, hogy jó vagy rossz-e. Ha plafont kell festeni, akkor tökéletes segítség. 
+                    Ha dolgozik vagy tanul, akkor 1-2 óráként fogyassza a magas koffeintartalmú közepes minőségű presszót.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/hala.png" alt="Image 1" class="firstpic">
+            <img src="img/flori.png" alt="Image 2" class="secondpic">
+            <img src="img/soma.png" alt="Image 3">
+            <img src="img/marki.png" alt="Image 4">
+            <img src="img/fruzsi.png" alt="Image 5">
+            <img src="img/group-2.png" alt="Image 6">
+            <img src="img/csengu.png" alt="Image 7">
+            <img src="img/levi.png" alt="Image 8">
+            <img src="img/hanni.png" alt="Image 9">
+        </div>
+    </main>
+    <script>
+        const leftSections = document.querySelectorAll('.left .section');
+        const images = document.querySelectorAll('.right img');
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+
+        init()
+
+        function init() {
+            images[0].style.clipPath =  `inset(0 0 0 0)`;
+        }
+
+        let lastScrollPos = 0;
+
+        function doSomething(scrollPos) {
+            const sectionHeight = leftSections[0].clientHeight;
+            images.forEach((img, index) => { 
+                const start = sectionHeight * index;
+                const end = sectionHeight * (index + 1);
+                
+                if (scrollPos >= start && scrollPos <= end) {
+                    img.style.clipPath = `inset(${((scrollPos - start) / sectionHeight) * 100}%  0 0 0)`;
+                    img.classList.add('firstpic');
+                    img.classList.remove('secondpic')
+                    if (index + 1 < images.length) {
+                        images[index + 1].classList.add('secondpic')
+                        images[index + 1].classList.remove('firstpic')
+                    }
+                    if (index > 0) {
+                        images[index - 1].classList.remove('firstpic')
+                    }
+                    if (index + 2 < images.length) {
+                        images[index + 2].classList.remove('secondpic')
+                    }
+                }
+            });
+            
+            /*if (lastScrollPos < scrollPos) {
+                
+            }
+            else {
+                images.forEach((img, index) => { 
+                    const start = sectionHeight * index;
+                    const end = sectionHeight * (index + 1);
+                    
+                    if (scrollPos >= start && scrollPos <= end) {
+                        img.style.clipPath = `inset(${((scrollPos - start) / sectionHeight) * 100}%  0 0 0)`;
+                        img.classList.add('firstpic');
+                        img.classList.remove('secondpic')
+                        if (index + 1 < images.length) {
+                            images[index + 1].classList.add('secondpic')
+                        }
+                        if (index > 0) {
+                            images[index - 1].classList.remove('firstpic')
+                        }
+                    }
+                });
+            }*/
+        }
+
+        document.querySelector('.left').addEventListener('scroll', function(e) {
+            lastKnownScrollPosition = e.target.scrollTop;
+
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    doSomething(lastKnownScrollPosition);
+                    ticking = false;
+                });
+
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+</html>
