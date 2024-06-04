@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu with Blog Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 140px;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-picture {
+            width: 50%;
+            height: auto;            ;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 10px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+        }
+        .post-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .post-date {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .post-content {
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: box-shadow 0.3s;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: text-shadow 0.3s, transform 0.3s;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .navbar .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .navbar .logo img {
+            height: 95px; /* Adjust the height as needed */
+        }
+        .navbar .apply-button a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, text-shadow 0.3s, transform 0.3s;
+        }
+        .navbar .apply-button a:hover {
+            background-color: gray;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="szmsz.html">SZMSZ</a></li>
+            <li><a href="webshop.html">Webshop</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <img src="img/soma-nyaral.png" alt="Main Picture" class="main-picture">
+            <div class="content">
+                <h2 class="post-title">Négyen, nem elég ruhában</h2>
+                <p class="post-date">Published on June 4, 2024</p>
+                <div class="post-content">
+                    <p>Ez nem egy szokványos nap volt a Velencei-tónál. Az egész úgy kezdődött hogy mint jó férfiak, megint nem érdekelte a négy srácot az időjárás jelentés. Mikor már verte őket egy ideje a vihar, egyikőjük felszolalt "Hangok vagyunk skinny dipelniz esőben". Úgy gondolták, hogy egy kis kaland még sosem ártott senkinek, főleg, hogy előtte tisztán itták a Bombay-t.</p>
+                    <p>A négy srácot semmi se tudta megállítani, hiszen köztudott volt, hogy "Ők tudnak főzni, ők áldoztak ezért!"</p>
+                    <p>Ahogy a sötét felhők összegyűltek és a szél erősödött, a fiúk ledobták ruháikat és beugrottak a vízbe. Kezdetben minden mókás volt, de a hideg vízben a dolgok bizony mínusz centisek lettek, de ez sem akadályozta meg őket abban, hogy a zuhogó esőben "Halasi Máté, az álma visszahív" című slágerét énekeljék teli torokból.</p>
+                    <p>Miközben a fiúk a vihar közepén mulatoztak, a rendőrök éppen őket keresték, mert a tó partján valaki figyelmes lett a méteres kékeres kupakostol 20cm-s zavargásokra. A fiúk persze mit sem törődve az egésszel, csak a cél-t tartották maguk előtt - kijutni a tóból, Feka seggét követve.</p>d
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
