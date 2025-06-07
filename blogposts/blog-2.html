@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Népszínház Blog - Négy faszi</title>
+  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="service-details-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -48,13 +48,13 @@
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Alex Smith</h1>
+      <h1 class="sitename">Népszínház</h1>
     </a>
 
-     <div class="social-links text-center">
-      <a href="https://drive.google.com/drive/folders/1fXDPhNpWGJt7id-es8TJLwLkg_PCWlHx?usp=sharing" class="pictures"><i class="bi bi-camera2"></i></a>
-      <a href="https://drive.google.com/drive/folders/1pKGapZ4SeIb6JNCtOHPJR4Bb7s9SSQHo?usp=sharing" class="lcvm"><i class="bi bi-pencil-square"></i></a>
-      <a href="https://drive.google.com/drive/folders/1Nar-PsseNZ1bJ8ERI0-lInpoB5ylbhFv?usp=sharing" class="musicalsongs"><i class="bi bi-music-note-beamed"></i></a>
+    <div class="social-links text-center">
+      <a href="#" class="pictures"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="lcvm"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="musicalsongs"><i class="bi bi-twitter-x"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -75,49 +75,92 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
+            <li class="current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Négy srác, Nulla ruha</h3>
-            <h4 style="padding-bottom: 10%; color: grey;">Published on Aug 4, 2024</h4>
-            <p>
-Ez nem egy szokványos nap volt a Velencei-tónál. Az egész úgy kezdődött, hogy valaki azt mondta: "Hang vagy," ami náluk annyit jelentett, hogy "nem mered megcsinálni." Négy srác úgy döntött, hogy egy viharos délutánon skinny dippingelnek a tóban. Úgy gondolták, hogy egy kis kaland még sosem ártott senkinek, főleg, hogy előtte tisztán megittak egy üveg Bombay gint.
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-A fiúk élvezni akarták az estét, de az eső elverte őket. Hát, ha már így alakult, úgy döntöttek, hogy kihasználják a helyzetet. "Mi tudunk főzni, mi áldoztunk ezért!" – mondták nevetve, és vetették bele magukat az esőbe és a kalandba.
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-Ahogy a sötét felhők összegyűltek és a szél erősödött, a fiúk ledobták ruháikat és beugrottak a vízbe. Kezdetben minden mókás volt, de a vihar hamarosan teljes erővel csapott le. A hideg vízben a dolgok bizony mínusz centisek lettek, de ez sem akadályozta meg őket abban, hogy a zuhogó esőben Halasi Máté "Álma visszahív" című slágerét énekeljék teli torokból.
+              <div class="swiper-wrapper align-items-center">
 
-Miközben a fiúk a vihar közepén mulatoztak, a rendőrök éppen őket keresték, mert a tó partján hagyott ruhák némi zavart okoztak. A fiúk persze mit sem törődve az egésszel, csak nevettek és élvezték a kalandot. Végül sikerült visszajutniuk a partra, mindenki épségben és nevetve.
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="">
+                </div>
 
-Azóta is mesélik, hogyan skinny dippingeltek egy viharban a Velencei-tónál, és hogy egy üveg gin és egy jó sláger mennyire meg tudja fűszerezni az életet. A rendőrök pedig azóta is keresik őket, de a fiúk csak nevetnek és azt mondják: "Hang vagy."
-            </p>
-</div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Service Details Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
-   <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background">
 
     <div class="container">
       <div class="copyright text-center">
@@ -129,6 +172,9 @@ Azóta is mesélik, hogyan skinny dippingeltek egy viharban a Velencei-tónál, 
         Based on a design by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Originally distributed by <a href="https://themewagon.com">ThemeWagon</a>. Redesigned and managed by Flórián Gál.
       </div>
     </div>
+    
+
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
