@@ -34,6 +34,47 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+    }
+
+    #current-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color:white;
+    
+    }
+
+    .track-list-item {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid #333;
+      color: white;
+    }
+
+    .track-list-item:hover,
+    .track-list-item.active {
+      background-color: #2a2a2a;
+    }
+
+    .btn {
+      min-width: 120px;
+    }
+
+    @media (max-width: 767px) {
+      .tracklist-container {
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="service-details-page">
@@ -68,69 +109,38 @@
     </div><!-- End Page Title -->
 
     <section id="music">
-      <div class="container py-5">
+      <div class="container py-4">
 
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">Halasi Máté - a dal</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/halasimate.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
+        <div class="row">
+          <!-- Player and Image -->
+          <div class="col-lg-8">
+            <div class="card mb-4 shadow">
+              <div class="card-body text-center">
+                <img src="assets/img/music-cover.jpg" alt="Album Art" class="img-fluid rounded mb-3" style="max-height: 250px; object-fit: cover;">
+                <h5 id="current-title" class="card-title mb-3">Töltés...</h5>
+                <audio id="audio-player" controls class="w-100 mb-3">
+                  A böngésződ nem támogatja az audio lejátszást.
+                </audio>
+                <div class="d-flex justify-content-between">
+                  <button id="prev-btn" class="btn btn-outline-light">⏮ Előző</button>
+                  <button id="next-btn" class="btn btn-outline-light">Következő ⏭</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">Filmesek megalakulása</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/filmesek.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
+          <!-- Track List -->
+          <div class="col-lg-4 tracklist-container">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="mb-3">Zenelistánk</h5>
+                <div id="track-list" class="list-group"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">Csavard fel a Leventét</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/csavardfelaleventet.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
-
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">A cseréplopás</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/csereplopas.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
-
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">Márk balladája</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/markballad.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
-  
-  <div class="card bg-dark text-white mb-4 shadow">
-    <div class="card-body">
-      <h5 class="card-title">Az okirat</h5>
-      <audio controls class="w-100">
-        <source src="assets/music/azokirat.mp3" type="audio/mpeg">
-        A böngésződ nem támogatja az audio lejátszást.
-      </audio>
-    </div>
-  </div>
-
-</div>
+      </div>
     </section>
 
   </main>
@@ -176,6 +186,99 @@
     })
     .catch(err => console.error('Failed to load menu:', err));
 </script>
+
+ <script>
+    const playlist = [
+      {
+        title: "Halasi Máté - a dal",
+        src: "assets/music/halasimate.mp3",
+        cover: "assets/img/music/halasimate.jpg"
+      },
+      {
+        title: "Filmesek megalakulása",
+        src: "assets/music/filmesek.mp3",
+        cover: "assets/img/music/filmesek.jpg"
+      },
+      {
+        title: "Csavard fel a Leventét",
+        src: "assets/music/csavardfelaleventet.mp3",
+        cover: "assets/img/music/csavardfelaleventet.jpg"
+      },
+      {
+        title: "A cseréplopás",
+        src: "assets/music/csereplopas.mp3",
+        cover: "assets/img/music/csereplopas.jpg"
+      },
+      {
+        title: "Márk balladája",
+        src: "assets/music/markballad.mp3",
+        cover: "assets/img/music/markballad.jpg"
+      },
+      {
+        title: "Az okirat",
+        src: "assets/music/azokirat.mp3",
+        cover: "assets/img/music/azokirat.jpg"
+      }
+    ];
+
+    const audioPlayer = document.getElementById('audio-player');
+    const titleDisplay = document.getElementById('current-title');
+    const trackListEl = document.getElementById('track-list');
+    const coverImage = document.getElementById('cover-image');
+
+    let currentIndex = 0;
+
+    function loadTrack(index) {
+      const track = playlist[index];
+      audioPlayer.src = track.src;
+      titleDisplay.textContent = track.title;
+      document.title = track.title;
+      coverImage.src = track.cover;
+      highlightActive(index);
+      audioPlayer.play();
+    }
+
+    function highlightActive(index) {
+      const items = document.querySelectorAll('.track-list-item');
+      items.forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+      });
+    }
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % playlist.length;
+      loadTrack(currentIndex);
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+      loadTrack(currentIndex);
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+      currentIndex = (currentIndex + 1) % playlist.length;
+      loadTrack(currentIndex);
+    });
+
+    // Build clickable track list
+    playlist.forEach((track, index) => {
+      const el = document.createElement('div');
+      el.classList.add('track-list-item');
+      el.textContent = track.title;
+      el.addEventListener('click', () => {
+        currentIndex = index;
+        loadTrack(currentIndex);
+      });
+      trackListEl.appendChild(el);
+    });
+
+    // Load the first track on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadTrack(currentIndex);
+    });
+  </script>
+
+
 
 </body>
 
