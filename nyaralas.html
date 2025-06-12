@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Népszínház - Blog</title>
+  <title>Népszínház Zenék</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -24,6 +24,29 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <style>
+  .pdf-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .pdf-container iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #fff;
+  }
+
+  /* Slightly shorter height on smaller screens */
+  @media (max-width: 768px) {
+    .pdf-container iframe {
+      height: 70vh;
+    }
+  }
+</style>
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -36,7 +59,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="service-details-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -51,7 +74,7 @@
       <h1 class="sitename">Népszínház</h1>
     </a>
 
-    <div class="social-links text-center">
+     <div class="social-links text-center">
   <a href="https://drive.google.com/drive/folders/1fXDPhNpWGJt7id-es8TJLwLkg_PCWlHx?usp=sharing" class="pictures" title="Galléria">
     <i class="bi bi-camera2"></i>
   </a>
@@ -65,8 +88,8 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" ><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="about_us.html" class="active"><i class="bi bi-person navicon"></i> Rólunk</a></li>
+        <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="about_us.html"><i class="bi bi-person navicon"></i> Rólunk</a></li>
         <li><a href="blog.html"><i class="bi bi-file-earmark-text navicon"></i> Blog</a></li>
         <li><a href="gallery.html"><i class="bi bi-images navicon"></i> Galéria</a></li>
         <li><a href="webshop.html"><i class="bi bi-hdd-stack navicon"></i> Webshop</a></li>
@@ -78,68 +101,40 @@
 
   <main class="main">
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Blog</h2>
-        <p>A legtrashebb, legfaszságabb dolgok blogja</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-   
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/blogpics/blog-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <p style="font-size: larger;">Négyen, nem elég ruhában</p>
-                  <a href="blog-1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/blogpics/blog-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <p style="font-size: larger;">Local man impregnates everyone's mother</p>
-                  <a href="blog-2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Nyaralás 2025</h1>
+        <nav class="breadcrumbs">
+        </nav>
       </div>
+    </div><!-- End Page Title -->
 
-    </section><!-- /Portfolio Section -->
+    <section class="pdf-container" style="max-width: 100%; padding: 1rem;">
+  <iframe 
+    src="assets/nyaralas.pdf" 
+    style="width: 100%; height: 80vh; border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" 
+    allowfullscreen>
+  </iframe>
+</section>
 
-     </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+    
+
+  </main>
+
+   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Népszínház</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        <!-- This site uses elements from the original iPortfolio template by BootstrapMade -->
+        <!-- It has been customized and adapted by Flórián for personal, non-commercial use -->
+        Based on a design by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Originally distributed by <a href="https://themewagon.com">ThemeWagon</a>. Redesigned and managed by Flórián Gál.
       </div>
     </div>
-
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

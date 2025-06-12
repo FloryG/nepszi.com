@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Népszínház - Blog</title>
+  <title>Népszínház - Tami</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -65,8 +65,8 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" ><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="about_us.html" class="active"><i class="bi bi-person navicon"></i> Rólunk</a></li>
+        <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="about_us.html"><i class="bi bi-person navicon"></i> Rólunk</a></li>
         <li><a href="blog.html"><i class="bi bi-file-earmark-text navicon"></i> Blog</a></li>
         <li><a href="gallery.html"><i class="bi bi-images navicon"></i> Galéria</a></li>
         <li><a href="webshop.html"><i class="bi bi-hdd-stack navicon"></i> Webshop</a></li>
@@ -78,66 +78,98 @@
 
   <main class="main">
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Tagleírás</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="about_us.html">Rólunk</a></li>
+            <li class="current">Tünde Szemű Hobbit
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Blog</h2>
-        <p>A legtrashebb, legfaszságabb dolgok blogja</p>
-      </div><!-- End Section Title -->
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4">
 
-   
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/blogpics/blog-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <p style="font-size: larger;">Négyen, nem elég ruhában</p>
-                  <a href="blog-1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center" style="height: 80vh; width: auto;">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/tagok/netti1.jpg " alt="">
                 </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/blogpics/blog-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <p style="font-size: larger;">Local man impregnates everyone's mother</p>
-                  <a href="blog-2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                
+                <div class="swiper-slide">
+                  <img src="assets/img/tagok/netti2.jpg " alt="">
                 </div>
-              </div>
-            </div><!-- End Portfolio Item -->
 
-          </div><!-- End Portfolio Container -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Főbb tudnivalók</h3>
+              <ul>
+                <li><strong>Jogi tagság</strong>: Bevándorló Kurva</li>
+                <li><strong>Szavazati és gonolkodási joga</strong>: Nincs</li>
+                <li><strong>Kedvenc ital</strong>: Gintonic minden színben, ami valszeg a cigány színeket is magában foglalja</li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2 style="text-align: center;">Tünde Szemű Hobbit</h2>
+              <p style="font-size: large;">
+                Aki nem olvasta volna a Harry Pottert, az bizony nem maradt le semmiről, nézzen inkább Star Wars-ot. De vissza Nettire Azt mondták nekünk, hogy borzalmasan rasszisták és szexisták vagyunk, ezért tűnt Netti felvenni a csoportba, hiszen ezzel kimaxoltuk a diverzitást nemi és rassz szempontból is. Jelenleg legkevesebbet jelenlevő tagunk, reméljük gyakrabban látjuk őt a jövőben. Kedvenc Lábbelije Flórián, itala a Gin-Tonic. Általános tulajdonsága, hogy FemiNáci, aki a nőket mindenki felé szeretné emelni, még akkoris ha azt mondja hogy csak egyenlőséget akar. Ez egy több lépcsős kisebbségi komplexus, de mi így szeretjük őt.             </p>
+            </div>
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Portfolio Section -->
+    </section><!-- /Portfolio Details Section -->
 
-     </main>
+  </main>
 
   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Népszínház</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        <!-- This site uses elements from the original iPortfolio template by BootstrapMade -->
+        <!-- It has been customized and adapted by Flórián for personal, non-commercial use -->
+        Based on a design by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Originally distributed by <a href="https://themewagon.com">ThemeWagon</a>. Redesigned and managed by Flórián Gál.
       </div>
     </div>
+    
 
   </footer>
 

@@ -36,6 +36,16 @@
   ======================================================== -->
 </head>
 
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('shared-menu').innerHTML = data;
+    })
+    .catch(err => console.error('Failed to load menu:', err));
+</script>
+
+
 <body class="portfolio-details-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
@@ -138,8 +148,8 @@
               <h3>Főbb tudnivalók</h3>
               <ul>
                 <li><strong>Jogi tagság</strong>: Bevándorló Kurva</li>
-                <li><strong>Szavazati és gonolkodási joga</strong>: Van</li>
-                <li><strong>Kedvenc ital</strong>: Gintonic</li>
+                <li><strong>Szavazati és gonolkodási joga</strong>: Nincs</li>
+                <li><strong>Kedvenc ital</strong>: Gintonic fancy ginből, mert én is egy fancy kurva vagyok</li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
