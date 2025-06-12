@@ -116,6 +116,18 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".header-toggle");
+    const header = document.querySelector(".header");
+
+    toggleBtn?.addEventListener("click", () => {
+      header.classList.toggle("header-show");
+    });
+  });
+</script>
+
   
 
 </body>
