@@ -1277,22 +1277,3 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-
-@media (max-width: 1199px) {
-  body.index-page .header-toggle {
-    display: flex !important;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 10001;
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-  }
-}
