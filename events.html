@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Népszínház - Hala</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .event-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.event-column {
+  flex: 1 1 45%;
+  min-width: 280px;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.event-column h2 {
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 1.3rem;
+}
+
+.event {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.event strong {
+  display: block;
+  font-size: 1.15em;
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .event-section {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+
+  .event-column {
+    flex: 1 1 100%;
+    max-height: none;
+    margin-bottom: 2rem;
+  }
+}
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Népszínház</h1>
+    </a>
+
+    <div id="shared-menu"></div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Események időrendje</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="about_us.html">Rólunk</a></li>
+            <li class="current">Naptár</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Calendar Event Columns -->
+    <div class="event-section">
+      <div class="event-column" id="past-events">
+        <h2>Múltbéli események</h2>
+      </div>
+      <div class="event-column" id="future-events">
+        <h2>Jövőbeli események</h2>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Népszínház</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Based on a design by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Redesigned and managed by Flórián Gál.
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Shared menu loader -->
+  <script>
+    fetch('./menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('shared-menu').innerHTML = data;
+      })
+      .catch(err => console.error('Failed to load menu:', err));
+  </script>
+
+  <!-- Google Calendar Events Script -->
+  <script>
+    const calendarId = "lcnepszi@gmail.com"; // e.g. mycalendar@group.calendar.google.com
+    const apiKey = "AIzaSyAfYzHh0f8N1FKUS5sa97i4x0cM2kjRpaw"; // from Google Cloud Console
+
+    async function loadEvents() {
+      const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true`;
+      const response = await fetch(url);
+      const data = await response.json();
+      const events = data.items || [];
+
+      const now = new Date();
+      const pastEl = document.getElementById("past-events");
+      const futureEl = document.getElementById("future-events");
+
+      events.forEach(event => {
+        const start = new Date(event.start.dateTime || event.start.date);
+        const end = new Date(event.end.dateTime || event.end.date);
+        const isPast = end < now;
+
+        const html = `
+          <div class="event">
+            <strong>${event.summary || "Névtelen esemény"}</strong>
+            ${event.location || "Helyszín nem megadott"}<br>
+            ${start.toLocaleDateString()} ${start.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})} - ${end.toLocaleDateString()} ${end.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})}
+          </div>
+        `;
+
+        (isPast ? pastEl : futureEl).insertAdjacentHTML("beforeend", html);
+      });
+    }
+
+    loadEvents();
+  </script>
+
+</body>
+</html>
