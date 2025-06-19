@@ -115,11 +115,11 @@
 
     <!-- Calendar Event Columns -->
     <div class="event-section">
-      <div class="event-column" id="past-events">
-        <h2>Múltbéli események</h2>
-      </div>
       <div class="event-column" id="future-events">
         <h2>Jövőbeli események</h2>
+      </div>
+      <div class="event-column" id="past-events">
+        <h2>Múltbéli események</h2>
       </div>
     </div>
 
@@ -175,8 +175,9 @@
       const events = data.items || [];
 
       const now = new Date();
-      const pastEl = document.getElementById("past-events");
       const futureEl = document.getElementById("future-events");
+      const pastEl = document.getElementById("past-events");
+      
 
       events.forEach(event => {
         const start = new Date(event.start.dateTime || event.start.date);
