@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no floryg@192.164.1.49 "cd /var/www/html && git pull origin main"
+        ssh -o StrictHostKeyChecking=no floryg@192.168.1.49 "cd /var/www/html && git pull origin main"
