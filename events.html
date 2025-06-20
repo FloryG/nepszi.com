@@ -165,39 +165,56 @@
 
   <!-- Google Calendar Events Script -->
   <script>
-    const calendarId = "lcnepszi@gmail.com"; // e.g. mycalendar@group.calendar.google.com
-    const apiKey = "AIzaSyAfYzHh0f8N1FKUS5sa97i4x0cM2kjRpaw"; // from Google Cloud Console
+  const calendarId = "lcnepszi@gmail.com"; // Calendar ID
+  const apiKey = "AIzaSyAfYzHh0f8N1FKUS5sa97i4x0cM2kjRpaw"; // API Key
 
-    async function loadEvents() {
-      const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true`;
-      const response = await fetch(url);
-      const data = await response.json();
-      const events = data.items || [];
+  async function loadEvents() {
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true`;
+    const response = await fetch(url);
+    const data = await response.json();
+    const events = data.items || [];
 
-      const now = new Date();
-      const futureEl = document.getElementById("future-events");
-      const pastEl = document.getElementById("past-events");
-      
+    const now = new Date();
+    const futureEl = document.getElementById("future-events");
+    const pastEl = document.getElementById("past-events");
 
-      events.forEach(event => {
-        const start = new Date(event.start.dateTime || event.start.date);
-        const end = new Date(event.end.dateTime || event.end.date);
-        const isPast = end < now;
+    const pastEvents = [];
+    const futureEvents = [];
 
-        const html = `
-          <div class="event">
-            <strong>${event.summary || "Névtelen esemény"}</strong>
-            ${event.location || "Helyszín nem megadott"}<br>
-            ${start.toLocaleDateString()} ${start.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})} - ${end.toLocaleDateString()} ${end.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})}
-          </div>
-        `;
+    events.forEach(event => {
+      const start = new Date(event.start.dateTime || event.start.date);
+      const end = new Date(event.end.dateTime || event.end.date);
+      const isPast = end < now;
 
-        (isPast ? pastEl : futureEl).insertAdjacentHTML("beforeend", html);
-      });
-    }
+      const html = `
+        <div class="event">
+          <strong>${event.summary || "Névtelen esemény"}</strong><br>
+          ${event.location || "Helyszín nem megadott"}<br>
+          ${start.toLocaleDateString()} ${start.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})} - 
+          ${end.toLocaleDateString()} ${end.toLocaleTimeString(undefined, {hour: '2-digit', minute: '2-digit'})}
+        </div>
+      `;
 
-    loadEvents();
-  </script>
+      if (isPast) {
+        pastEvents.push({ end, html });
+      } else {
+        futureEvents.push(html);
+      }
+    });
+
+    // Sort past events: most recent first
+    pastEvents.sort((a, b) => b.end - a.end);
+
+    // Render future events
+    futureEvents.forEach(html => futureEl.insertAdjacentHTML("beforeend", html));
+
+    // Render sorted past events
+    pastEvents.forEach(({ html }) => pastEl.insertAdjacentHTML("beforeend", html));
+  }
+
+  loadEvents();
+</script>
+
 
 </body>
 </html>
