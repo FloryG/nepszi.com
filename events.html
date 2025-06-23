@@ -232,7 +232,25 @@
 
   loadEvents();
 </script>
+<script>
+  (function () {
+  const path = window.location.pathname;
 
+  // Skip if already an .html page or root
+  if (path.endsWith('.html') || path === '/' || path === '/index') return;
+
+  // Redirect to matching .html file
+  const cleanPath = path.endsWith('/') ? path.slice(0, -1) : path;
+  const newUrl = `${cleanPath}.html`;
+
+  // Check if file exists before redirecting (optional but smart)
+  fetch(newUrl, { method: 'HEAD' }).then(response => {
+    if (response.ok) {
+      window.location.replace(newUrl);
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
