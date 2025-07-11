@@ -45,6 +45,16 @@
       height: 70vh;
     }
   }
+
+  .pdf-post-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.pdf-post.open .pdf-post-content {
+  max-height: 5000px; /* large enough to fit full content */
+}
 </style>
 
   <!-- Main CSS File -->
@@ -94,16 +104,18 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Nyaralás 2025 - Delegate Booklet</h1>
+        <h1 class="mb-2 mb-lg-0">Nyaralás 2025</h1>
         <nav class="breadcrumbs">
         </nav>
       </div>
     </div><!-- End Page Title -->
 
     <section class="pdf-posts container py-4">
-  <!-- First post -->
-  <div class="pdf-post mb-5">
-    <h2 class="pdf-post-title">Delegate booklet</h2>
+    <div class="pdf-post">
+    <h2 class="pdf-post-title toggle-btn" style="cursor: pointer;">
+      Delegate Booklet <i class="bi bi-chevron-down"></i>
+    </h2>
+    <div class="pdf-post-content mb-5">
     <img src="assets/img/nyaralas/1/nepszi_booklet_1.png" alt="Delegate Booklet - Page 1" class="img-fluid rounded shadow mb-3">
     <img src="assets/img/nyaralas/1/nepszi_booklet_2.png" alt="Delegate Booklet - Page 2" class="img-fluid rounded shadow">
     <img src="assets/img/nyaralas/1/nepszi_booklet_3.png" alt="Delegate Booklet - Page 1" class="img-fluid rounded shadow">
@@ -122,6 +134,18 @@
     <img src="assets/img/nyaralas/1/nepszi_booklet_16.png" alt="Delegate Booklet - Page 2" class="img-fluid rounded shadow">
     <img src="assets/img/nyaralas/1/nepszi_booklet_17.png" alt="Delegate Booklet - Page 2" class="img-fluid rounded shadow">
   </div>
+  </div>
+
+  <div class="pdf-post">
+    <h2 class="pdf-post-title toggle-btn" style="cursor: pointer;">
+      Delegate Mailer - 1 <i class="bi bi-chevron-down"></i>
+    </h2>
+    <div class="pdf-post-content mb-5">
+
+  </div>
+  </div>
+
+
 
 </section>
 
@@ -169,6 +193,22 @@
       document.getElementById('shared-menu').innerHTML = data;
     })
     .catch(err => console.error('Failed to load menu:', err));
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const post = btn.closest('.pdf-post');
+        post.classList.toggle('open');
+
+        // Optional: toggle icon direction
+        const icon = btn.querySelector('i');
+        if (icon) icon.classList.toggle('bi-chevron-down');
+        if (icon) icon.classList.toggle('bi-chevron-up');
+      });
+    });
+  });
 </script>
 
 </body>
