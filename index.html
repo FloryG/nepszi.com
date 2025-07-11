@@ -105,13 +105,23 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    fetch('./menu.html')
+  fetch('./menu.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('shared-menu').innerHTML = data;
+
+      // After menu is loaded, add dropdown toggle functionality
+      document.querySelectorAll('.toggle-dropdown').forEach(toggle => {
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const parent = this.closest('.dropdown');
+          parent.classList.toggle('open');
+        });
+      });
     })
     .catch(err => console.error('Failed to load menu:', err));
 </script>
+
 
 </body>
 
